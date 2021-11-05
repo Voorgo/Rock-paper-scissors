@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Chakra Petch", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-size: 2.6rem;
+  position: absolute;
+  top: 30px;
+  text-align: center;
+}
+
+#score {
+  text-align: center;
+  font-size: 1.4rem;
+  position: relative;
+  top: 40px;
+  left: 170px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  visibility: hidden;
+}
+
+#content {
+  display: flex;
+  color: black;
+  gap: 30px;
+}
+
+.icons {
+  display: flex;
+  position: relative;
+  top: 30%;
+  left: -40px;
+  gap: 20px;
+}
+
+.hex {
+  background: #0c7daa;
+  width: 200px;
+  height: 346px;
+  position: relative;
+  z-index: 2;
+}
+.hexagon {
+  position: relative;
+}
+.hexagon::before,
+.hexagon::after {
+  content: "";
+  background: #0c7daa;
+  position: absolute;
+  width: 200px;
+  height: 346px;
+  top: 0;
+  transform: rotate(60deg);
+}
+.hexagon::after {
+  transform: rotate(-60deg);
+}
+
+.first {
+  top: -50px;
+  left: -50px;
+}
+
+.second {
+  top: 124px;
+  left: 50px;
+}
+
+.hex p {
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  position: inherit;
+  top: 30px;
+  user-select: none;
+}
+
+.icons i {
+  background: white;
+  padding: 10px;
+  box-shadow: 5px 5px 0 black;
+  transition: 0.1s transform, 0.1s box-shadow;
+}
+.player i {
+  cursor: pointer;
+}
+
+.player i:hover:active {
+  box-shadow: none;
+  transform: translate(3px, 3px) scale(0.95);
+}
+
+.player i:hover {
+  background: rgb(214, 214, 214);
+  transform: scale(0.95);
+}
+span {
+  font-size: 1.7rem;
+}
+
+#replay {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  cursor: pointer;
+  width: 80px;
+  height: 30px;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  font-family: inherit;
+  background: white;
+  box-shadow: 3px 3px 0 #0c7daa;
+  visibility: hidden;
+}
+.computer {
+  user-select: none;
+}
+
+@media (max-width: 740px) {
+  h1 {
+    font-size: 1.3rem;
+    top: 20px;
+  }
+  #container {
+    transform: scale(0.5);
+    position: static;
+  }
+  .first {
+    top: 0;
+    left: 0;
+  }
+  .second {
+    top: 0;
+    left: 0;
+  }
+  #content {
+    flex-direction: column;
+  }
+  #score {
+    top: 0px;
+    left: 0;
+    margin-bottom: 30px;
+  }
+  #replay {
+    position: relative;
+    top: 0;
+    margin-top: 10px;
+    left: 0;
+  }
+}

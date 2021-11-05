@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, paper, sicssors</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <script
+      src="https://kit.fontawesome.com/be5e3eacd2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <audio src="sound/click.mp3" id="sound"></audio>
+    <h1>Rock,Paper,Scissors</h1>
+    <section id="container">
+      <div id="score">
+        <h2>You win</h2>
+        <div>
+          <span class="user-score">0</span>-<span class="computer-score"
+            >0</span
+          >
+        </div>
+        <button id="replay">Replay</button>
+      </div>
+      <div id="content">
+        <div class="hexagon first">
+          <div class="hex">
+            <p>Player</p>
+            <div class="icons player">
+              <i class="far fa-hand-rock fa-4x" data-selection="rock"></i>
+              <i class="far fa-hand-paper fa-4x" data-selection="paper"></i>
+              <i
+                class="far fa-hand-scissors fa-4x"
+                data-selection="scissors"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <div class="hexagon second">
+          <div class="hex">
+            <p>Computer</p>
+            <div class="icons computer">
+              <i class="far fa-hand-rock fa-4x" data-comp="rock"></i>
+              <i class="far fa-hand-paper fa-4x" data-comp="paper"></i>
+              <i class="far fa-hand-scissors fa-4x" data-comp="scissors"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
